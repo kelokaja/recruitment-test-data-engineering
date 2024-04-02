@@ -57,3 +57,17 @@ services:
     command: ["swift", "run"]
     volumes:
       - ./data:/data
+
+  python-interview-solution-db-upload:
+    image: python-interview-solution-db-upload
+    build: images/python-interview-solution_db_upload
+    command: [ "./interview-solution-db-upload.py" ]
+    volumes:
+      - ./data:/data
+
+  python-interview-solution-json-generator:
+    image: python-interview-solution-json-generator
+    build: images/python-interview-solution-json-generator
+    command: [ "./interview-solution-json-generator.py" ]
+    volumes:
+      - ./data:/data
